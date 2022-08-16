@@ -9,7 +9,7 @@
 	$default1 = "10 12";
 	$default2 = "13 17";
 
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	if (isset($_POST["submit"])) {
 		$input1 = trim($_POST["input1"]);
 		$input2 = trim($_POST["input2"]);
 
