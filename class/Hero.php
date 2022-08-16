@@ -11,7 +11,7 @@ Class Hero {
 	    {
 	        return false;
 	    }
-	    for ($i = 2; $i * $i <= $num; $i++)
+	    for ($i = 2; $i < $num; $i++)
 	    {
 	        if ($num % $i == 0)
 	        {
@@ -26,10 +26,10 @@ Class Hero {
 	 */
 	public function numberSum($r)
 	{
-		$c = 1;		// counter
+		$c = 0;		// counter
 		$i = 2;
 	    $sum = 0;
-	    while ($c < $r)
+	    while ($c <= $r)
 	    {
 	        // Check number
 	        $isOk = $this->checkNumber($i);
@@ -56,7 +56,7 @@ Class Hero {
 			$res = $this->numberSum($year-1);
 			$res += 2;
 		}
-
+		
 		return $res;
 	}
 
